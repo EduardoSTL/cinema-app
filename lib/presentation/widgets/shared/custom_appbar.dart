@@ -47,12 +47,10 @@ class CustomAppbar extends ConsumerWidget {
                 },
                 icon: const Icon(Icons.search)
                 ),
-      
-              IconButton(onPressed: (){
-      
+              /* IconButton(onPressed: (){
               }, 
               icon: const Icon(Icons.search)
-              )
+              ) */
             ],
           ),
         ),
