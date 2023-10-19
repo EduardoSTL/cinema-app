@@ -4,7 +4,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cinemapedia/domain/entities/movie.dart';
 import 'package:go_router/go_router.dart';
 
-
 class MovieHorizontalListview extends StatefulWidget {
 
   final List<Movie> movies;
@@ -39,9 +38,7 @@ class _MovieHorizontalListviewState extends State<MovieHorizontalListview> {
       if ( (scrollController.position.pixels + 200) >= scrollController.position.maxScrollExtent ) {
         widget.loadNextPage!();
       }
-
     });
-
   }
 
   @override
@@ -50,18 +47,14 @@ class _MovieHorizontalListviewState extends State<MovieHorizontalListview> {
     super.dispose();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 350,
       child: Column(
         children: [
-
           if ( widget.title != null || widget.subTitle != null )
             _Title(title: widget.title, subTitle: widget.subTitle ),
-
 
           Expanded(
             child: ListView.builder(
@@ -74,7 +67,6 @@ class _MovieHorizontalListviewState extends State<MovieHorizontalListview> {
               },
             )
           )
-
         ],
       ),
     );
@@ -119,7 +111,6 @@ class _Slide extends StatelessWidget {
                     onTap: () => context.push('/movie/${ movie.id }'),
                     child: FadeIn(child: child),
                   );
-                  
                 },
               ),
             ),
@@ -142,24 +133,19 @@ class _Slide extends StatelessWidget {
             width: 150,
             child: Row(
               children: [
-                Icon( Icons.star_half_outlined, color: Colors.yellow.shade800 ),
+                Icon( Icons.star_half_outlined, color: Colors.yellow.shade800),
                 const SizedBox( width: 3 ),
                 Text('${ movie.voteAverage }', style: textStyles.bodyMedium?.copyWith( color: Colors.yellow.shade800 )),
                 const Spacer(),
-                Text( HumanFormats.number(movie.popularity), style: textStyles.bodySmall ),
-          
+                Text( HumanFormats.number(movie.popularity), style: textStyles.bodySmall),
               ],
             ),
           )
-
-
         ],
       ),
     );
   }
 }
-
-
 
 class _Title extends StatelessWidget {
 
@@ -191,7 +177,6 @@ class _Title extends StatelessWidget {
               onPressed: (){}, 
               child: Text( subTitle! )
           )
-
         ],
       ),
     );
