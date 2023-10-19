@@ -1,3 +1,4 @@
+import 'package:cinemapedia/presentation/widgets/movies/movie_masonry.dart';
 import 'package:cinemapedia/presentation/providers/storage/favorite_movies_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
