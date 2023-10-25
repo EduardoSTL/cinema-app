@@ -52,7 +52,7 @@ class HomeViewState extends ConsumerState<HomeView> {
         ),
 
 
-        SliverList(delegate: SliverChildBuilderDelegate(
+       SliverList(delegate: SliverChildBuilderDelegate(
           (context, index) {
               return Column(
                   children: [
@@ -91,14 +91,12 @@ class HomeViewState extends ConsumerState<HomeView> {
                     ),
 
                     const SizedBox( height: 10 ),
-              
-              
+      
                   ],
                 );
           },
           childCount: 1
         )),
-
       ]
     );
   }
