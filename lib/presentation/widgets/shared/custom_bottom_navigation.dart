@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 class CustomBottomNavigation extends StatelessWidget {
 
   final int currentIndex;
+  
   const CustomBottomNavigation({super.key, required this.currentIndex});
 
   void onItemTapped(BuildContext context, int index){
